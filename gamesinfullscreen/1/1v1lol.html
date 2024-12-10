@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <!-- Font Awesome icons (free version)-->
+		<script src="https://kit.fontawesome.com/eeb01edac2.js" crossorigin="anonymous"></script>
+      <!--end of Font Awesome icons (free version)-->
+      
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1v1.lol - Playing in Fullscreen</title>
+    
+    <!--Fullscreen Iframe with Popup-->
+    
+    
+    
+    <!-- Google fonts-->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+        
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            overflow: hidden;
+            font-family: Poppins;
+        }
+        .iframe-cover {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+        .popup {
+            position: fixed;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+           /* background: white; */
+            background: darkred;
+            padding: 10px 20px;
+            border: 1px solid #ccc;
+            z-index: 2;
+            font-family: Poppins;
+            border-radius: 11px;
+        }
+        .close-btn {
+            cursor: pointer;
+            margin-left: 10px;
+        }
+        
+        p {
+           color: white;
+           text-decoration: none;
+        }
+        
+        a {
+           text-decoration: none;
+           color: white;
+        }
+    </style>
+</head>
+<body>
+
+<div class="popup">
+   <font color="white">You are now playing <b>1v1.lol</b><span class="close-btn" onclick="closePopup()"><i class="fa fa-close" style="font-size:36px" alt="&times;" title="Close"></i></span> on <a href="//valodokagames.github.io" target="_blank" style="text-decoration: none;"><img src="https://avatars.githubusercontent.com/u/159365921?v=4" alt="vdka games logo" width="20" height="20"></img> &nbsp;Valodoka Games</a>.</div>
+<iframe class="iframe-cover" src="https://1v1.lol"></iframe>
+
+<script>
+    function closePopup() {
+        document.querySelector('.popup').style.display = 'none';
+    }
+</script>
+
+</body>
+</html>
